@@ -4,6 +4,7 @@ project(BlackJack)
 set(exec BlackJack)
 set(src
 	src/main.cpp
+	src/card.cpp
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)

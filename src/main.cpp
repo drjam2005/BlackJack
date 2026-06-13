@@ -1,16 +1,19 @@
-#include "raylib.h"
+#include <iostream>
+
+// #include "raylib.h"
+#include "card.h"
+#include <vector>
 
 // just do card renderer for now
 
 int main(){
-	InitWindow(800, 600, "BLACKJACK");
-	SetTargetFPS(60);
-	while(!WindowShouldClose()){
-		BeginDrawing();
-		ClearBackground(BLACK);
 
-		EndDrawing();
+	std::vector<Card> cards = get_standard_deck();
+
+	for(auto card : cards){
+		std::cout << "Card: " << get_value_string(card.value) << " of " << get_suit_string(card.suit) << '\n';
 	}
-	CloseWindow();
+
+
 	return 0;
 }
