@@ -3,6 +3,7 @@
 #define CARD_H
 
 #include <vector>
+#include <string>
 
 enum CARD_SUIT {
 	SUIT_SPADES = 0,
@@ -37,5 +38,7 @@ struct Card {
 std::vector<Card> get_standard_deck();
 const char* get_suit_string(CARD_SUIT suit);
 const char* get_value_string(CARD_VALUE value);
+const char* get_value_string_short(CARD_VALUE value);
+std::string get_card_string(Card card);
 
 #endif // CARD_H

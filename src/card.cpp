@@ -56,3 +56,38 @@ const char* get_value_string(CARD_VALUE value){
 			return "NULL";
 	}
 }
+const char* get_value_string_short(CARD_VALUE value) {
+	switch(value){
+		case VALUE_ACE:
+			return "A";
+		case VALUE_TWO:
+			return "2";
+		case VALUE_THREE:
+			return "3";
+		case VALUE_FOUR:
+			return "4";
+		case VALUE_FIVE:
+			return "5";
+		case VALUE_SIX:
+			return "6";
+		case VALUE_SEVEN:
+			return "7";
+		case VALUE_EIGHT:
+			return "8";
+		case VALUE_NINE:
+			return "9";
+		case VALUE_TEN:
+			return "10";
+		case VALUE_KING:
+			return "K";
+		case VALUE_QUEEN:
+			return "Q";
+		case VALUE_JACK:
+			return "J";
+		default:
+			return 0;
+	}
+}
+std::string get_card_string(Card card) {
+	return std::string(get_value_string(card.value)) + " of " + get_suit_string(card.suit);
+}

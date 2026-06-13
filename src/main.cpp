@@ -10,8 +10,9 @@ int main(){
 
 	std::vector<Card> cards = get_standard_deck();
 
+	std::cout << "Size of Deck: " << cards.size() << '\n';
 	for(auto card : cards){
-		std::cout << "Card: " << get_value_string(card.value) << " of " << get_suit_string(card.suit) << '\n';
+		std::cout << get_card_string(card) << '\n';
 	}
 
 
