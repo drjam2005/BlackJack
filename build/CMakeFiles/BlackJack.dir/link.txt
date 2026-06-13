@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/BlackJack.dir/src/main.cpp.o -o BlackJack   -L/home/james/Projects/BlackJack/vendor/raylib/unix/lib  -Wl,-rpath,/home/james/Projects/BlackJack/vendor/raylib/unix/lib -Wl,-Bstatic -lraylib -Wl,-Bdynamic -lX11 
