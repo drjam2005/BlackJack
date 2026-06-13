@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/james/Projects/BlackJack/build",
+  "command": "/usr/bin/c++  -I/home/james/Projects/BlackJack/include -I/home/james/Projects/BlackJack/vendor/raylib/unix/include  -o CMakeFiles/BlackJack.dir/src/main.cpp.o -c /home/james/Projects/BlackJack/src/main.cpp",
+  "file": "/home/james/Projects/BlackJack/src/main.cpp",
+  "output": "CMakeFiles/BlackJack.dir/src/main.cpp.o"
+}
+]
