@@ -5,9 +5,11 @@ set(exec BlackJack)
 set(src
 	src/main.cpp
 	src/card.cpp
+	src/renderer.cpp
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
+set(CMAKE_CXX_STANDARD 20)
 
 add_executable(${exec} ${src})
 target_include_directories(${exec} PUBLIC

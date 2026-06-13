@@ -1,18 +1,29 @@
-#include <iostream>
 
 // #include "raylib.h"
-#include "card.h"
-#include <vector>
+#include "renderer.h"
+#include "raylib.h"
+#include <cstdio>
 
 // just do card renderer for now
 
 int main(){
+	Renderer renderer;
 
-	std::vector<Card> cards = get_standard_deck();
+	InitWindow(800, 600, "BlackJack");
+	SetTargetFPS(60);
+	while(!WindowShouldClose()){
+		BeginDrawing();
+		ClearBackground(BLACK);
 
-	std::cout << "Size of Deck: " << cards.size() << '\n';
-	for(auto card : cards){
-		std::cout << get_card_string(card) << '\n';
+		renderer._render_card(
+					Card {
+						.suit = SUIT_HEARTS,
+						.value = VALUE_FOUR
+					}
+				);
+			
+
+		EndDrawing();
 	}
 
 
