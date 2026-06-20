@@ -1,11 +1,11 @@
 #include "card.h"
 
-std::vector<Card> get_standard_deck() {
-	std::vector<Card> cards;
+std::unordered_set<Card> get_standard_deck() {
+	std::unordered_set<Card> cards;
 
 	for(size_t suit = 0; suit < SUIT_COUNT; ++suit)
 		for(size_t value = 1; value < VALUE_COUNT; ++value)
-			cards.push_back((Card){(CARD_SUIT)suit, (CARD_VALUE)value});
+			cards.insert((Card){(CARD_SUIT)suit, (CARD_VALUE)value});
 
 	return cards;
 }

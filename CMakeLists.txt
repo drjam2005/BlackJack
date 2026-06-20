@@ -6,6 +6,8 @@ set(src
 	src/main.cpp
 	src/card.cpp
 	src/renderer.cpp
+	src/updater.cpp
+	src/game.cpp
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)

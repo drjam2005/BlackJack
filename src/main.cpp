@@ -1,8 +1,8 @@
-#include "renderer.h"
+#include "game.h"
 #include "raylib.h"
 
 int main(){
-	Renderer renderer;
+	Game game;
 
 	InitWindow(800, 600, "BlackJack");
 	SetTargetFPS(60);
@@ -10,10 +10,7 @@ int main(){
 		BeginDrawing();
 		ClearBackground(BLACK);
 
-		renderer._render_card( Card { 
-				.suit = SUIT_SPADES,
-				.value = VALUE_ACE 
-			});
+		game.Loop();
 
 		EndDrawing();
 	}

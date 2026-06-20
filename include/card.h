@@ -2,8 +2,8 @@
 #ifndef CARD_H
 #define CARD_H
 
-#include <vector>
 #include <string>
+#include <unordered_set>
 
 enum CARD_SUIT {
 	SUIT_SPADES = 0,
@@ -33,9 +33,22 @@ enum CARD_VALUE {
 struct Card {
 	CARD_SUIT suit;
 	CARD_VALUE value;
+
+	bool operator==(const Card& other) const {
+		return (this->suit == other.suit && this->value == other.value);
+	}
 };
 
-std::vector<Card> get_standard_deck();
+namespace std {
+    template<>
+    struct hash<Card> {
+        size_t operator()(const Card& c) const {
+            return hash<int>{}(c.value) ^ (hash<int>{}(c.suit) << 1);
+        }
+    };
+}
+
+std::unordered_set<Card> get_standard_deck();
 const char* get_suit_string(CARD_SUIT suit);
 const char* get_value_string(CARD_VALUE value);
 const char* get_value_string_short(CARD_VALUE value);
