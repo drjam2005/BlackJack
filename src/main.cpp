@@ -1,10 +1,5 @@
-
-// #include "raylib.h"
 #include "renderer.h"
 #include "raylib.h"
-#include <cstdio>
-
-// just do card renderer for now
 
 int main(){
 	Renderer renderer;
@@ -15,17 +10,13 @@ int main(){
 		BeginDrawing();
 		ClearBackground(BLACK);
 
-		renderer._render_card(
-					Card {
-						.suit = SUIT_HEARTS,
-						.value = VALUE_FOUR
-					}
-				);
-			
+		renderer._render_card( Card { 
+				.suit = SUIT_SPADES,
+				.value = VALUE_ACE 
+			});
 
 		EndDrawing();
 	}
-
 
 	return 0;
 }
