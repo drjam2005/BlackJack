@@ -18,6 +18,10 @@ target_include_directories(${exec} PUBLIC
 	${CMAKE_SOURCE_DIR}/include
 )
 
+target_compile_options(${exec}
+	PUBLIC -Wno-enum-compare
+)
+
 if(UNIX)
 	target_include_directories(${exec} PUBLIC
 		${CMAKE_SOURCE_DIR}/vendor/raylib/unix/include

@@ -16,15 +16,14 @@ extern RendererParams defaultRendererParams;
 
 class Renderer {
 private:
-	char** icons_filename = nullptr;
 	RendererParams params;
 	GameState& gameState;
 public:
 	Renderer(GameState& gameState, RendererParams params = defaultRendererParams);
 	~Renderer();
 	void Render();
-	void _render_card(Card card);
-	void _render_hand(Hand hand);
+	void _render_card(Card card, Vector2 position);
+	void _render_hand(Hand hand, Vector2 position);
 };
 
 #endif

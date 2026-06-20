@@ -4,6 +4,7 @@ Game::Game() :
 	updater(Updater(gameState)),
 	renderer(Renderer(gameState))
 {
+
 }
 
 void Game::Loop(){
