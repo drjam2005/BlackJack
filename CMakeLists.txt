@@ -5,6 +5,7 @@ set(exec BlackJack)
 set(src
 	src/main.cpp
 	src/card.cpp
+	src/hand.cpp
 	src/renderer.cpp
 	src/updater.cpp
 	src/game.cpp
@@ -12,6 +13,8 @@ set(src
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 set(CMAKE_CXX_STANDARD 20)
+message(STATUS "C++ compiler: ${CMAKE_CXX_COMPILER}")
+message(STATUS "Compiler ID: ${CMAKE_CXX_COMPILER_ID}")
 
 add_executable(${exec} ${src})
 target_include_directories(${exec} PUBLIC
